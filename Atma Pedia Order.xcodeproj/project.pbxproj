@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BC9DDCEF21A2C7C000DED4C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DDCEE21A2C7C000DED4C2 /* AppDelegate.swift */; };
-		BC9DDCF121A2C7C000DED4C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DDCF021A2C7C000DED4C2 /* ViewController.swift */; };
+		BC9DDCF121A2C7C000DED4C2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DDCF021A2C7C000DED4C2 /* LoginController.swift */; };
 		BC9DDCF421A2C7C000DED4C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9DDCF221A2C7C000DED4C2 /* Main.storyboard */; };
 		BC9DDCF621A2C7C200DED4C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9DDCF521A2C7C200DED4C2 /* Assets.xcassets */; };
 		BC9DDCF921A2C7C200DED4C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9DDCF721A2C7C200DED4C2 /* LaunchScreen.storyboard */; };
+		BC9DDD0121A2CFC900DED4C2 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DDD0021A2CFC900DED4C2 /* RegisterController.swift */; };
+		BC9DDD1A21A3172B00DED4C2 /* YourOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DDD1921A3172B00DED4C2 /* YourOrderController.swift */; };
+		BC9DDD1C21A3184900DED4C2 /* PopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9DDD1B21A3184900DED4C2 /* PopUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC9DDCEB21A2C7C000DED4C2 /* Atma Pedia Order.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Atma Pedia Order.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9DDCEE21A2C7C000DED4C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC9DDCF021A2C7C000DED4C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC9DDCF021A2C7C000DED4C2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		BC9DDCF321A2C7C000DED4C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC9DDCF521A2C7C200DED4C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC9DDCF821A2C7C200DED4C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC9DDCFA21A2C7C200DED4C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC9DDD0021A2CFC900DED4C2 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		BC9DDD1921A3172B00DED4C2 /* YourOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourOrderController.swift; sourceTree = "<group>"; };
+		BC9DDD1B21A3184900DED4C2 /* PopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				BC9DDCEE21A2C7C000DED4C2 /* AppDelegate.swift */,
-				BC9DDCF021A2C7C000DED4C2 /* ViewController.swift */,
 				BC9DDCF221A2C7C000DED4C2 /* Main.storyboard */,
 				BC9DDCF521A2C7C200DED4C2 /* Assets.xcassets */,
 				BC9DDCF721A2C7C200DED4C2 /* LaunchScreen.storyboard */,
 				BC9DDCFA21A2C7C200DED4C2 /* Info.plist */,
+				BC9DDCF021A2C7C000DED4C2 /* LoginController.swift */,
+				BC9DDD0021A2CFC900DED4C2 /* RegisterController.swift */,
+				BC9DDD1921A3172B00DED4C2 /* YourOrderController.swift */,
+				BC9DDD1B21A3184900DED4C2 /* PopUpController.swift */,
 			);
 			path = "Atma Pedia Order";
 			sourceTree = "<group>";
@@ -135,8 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC9DDCF121A2C7C000DED4C2 /* ViewController.swift in Sources */,
+				BC9DDCF121A2C7C000DED4C2 /* LoginController.swift in Sources */,
 				BC9DDCEF21A2C7C000DED4C2 /* AppDelegate.swift in Sources */,
+				BC9DDD0121A2CFC900DED4C2 /* RegisterController.swift in Sources */,
+				BC9DDD1C21A3184900DED4C2 /* PopUpController.swift in Sources */,
+				BC9DDD1A21A3172B00DED4C2 /* YourOrderController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
