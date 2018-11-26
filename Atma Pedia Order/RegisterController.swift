@@ -20,6 +20,7 @@ class RegisterController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    //Hide keyboard from random tap on the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

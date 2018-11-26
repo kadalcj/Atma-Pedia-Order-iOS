@@ -1,18 +1,18 @@
 //
-//  MainMenuController.swift
+//  MainCategoryController.swift
 //  Atma Pedia Order
 //
-//  Created by Sul on 2018/11/26.
+//  Created by Sul on 2018/11/23.
 //  Copyright © 2018 Sul Compagnie. All rights reserved.
 //
 
 import UIKit
 
-class MainMenuController: UITableViewController {
-    let URL_JSON = "https://atmapediaorder.nolyfeteam.site/public/api/menu/"
-    var category: String!
+class MainCategoryController: UITableViewController {
     
-    var items = [Items]()
+    let URL_JSON = "https://atmapediaorder.nolyfeteam.site/public/api/categories/"
+    
+    var categories = [Categories]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,16 +25,15 @@ class MainMenuController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return categories.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuTable", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "categoriesTable", for: indexPath)
         
-        cell.textLabel?.text = items[indexPath.row].name
-        cell.detailTextLabel?.text = "Rp. " + items[indexPath.row].price
+        cell.textLabel?.text = categories[indexPath.row].categories
         
-        let imageURL = URL(string: items[indexPath.row].imageURL)
+        let imageURL = URL(string: categories[indexPath.row].image_url)
         DispatchQueue.global().async {
             let data = try? Data(contentsOf: imageURL!)
             if let data = data {
@@ -53,7 +52,7 @@ class MainMenuController: UITableViewController {
         URLSession.shared.dataTask(with: url!) {
             (data, response, err) in
             if err != nil {
-                print("#Items# Error 1: err != nil")
+                print("#Categories# Error 1: err != nil")
             }
             else {
                 if let useable = data {
@@ -62,10 +61,10 @@ class MainMenuController: UITableViewController {
                         
                         print(jsonObject)
                         
-                        let item = jsonObject as? [AnyObject]
-                        for itm in item! {
-                            let i = Items(json: itm as! [String: Any])
-                            self.items.append(i)
+                        let categories = jsonObject as? [AnyObject]
+                        for cat in categories! {
+                            let c = Categories(json: cat as! [String: Any])
+                            self.categories.append(c)
                         }
                         
                         DispatchQueue.main.async(execute: {
@@ -73,7 +72,7 @@ class MainMenuController: UITableViewController {
                         })
                     }
                     catch {
-                        print("#Items# Error 2: under the else condition *catch")
+                        print("#Categories# Error 2: under the else condition *catch")
                     }
                 }
             }
@@ -81,17 +80,17 @@ class MainMenuController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailVC", sender: (Any).self)
+        performSegue(withIdentifier: "menuVC", sender: (Any).self)
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detailVC" {
-            let menuDetailController = segue.destination as! MainDetailController
-            
-            let index = tableView.indexPathForSelectedRow!.row
-            
-            menuDetailController.items = items[index]
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "menuVC" {
+//            let mainMenuController = segue.destination as! MainMenuController
+//
+//            let index = tableView.indexPathForSelectedRow!.row
+//
+//            mainMenuController.category = categories[index].categories
+//        }
+//    }
 }
