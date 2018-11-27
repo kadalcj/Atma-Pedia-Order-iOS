@@ -9,15 +9,14 @@
 import UIKit
 
 class MainMenuController: UITableViewController {
+    var category: Categories!
     let URL_JSON = "https://atmapediaorder.nolyfeteam.site/public/api/menu/"
-    var category: String!
     
     var items = [Items]()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        getJSON(urlString: URL_JSON);
+
+        getJSON(urlString: URL_JSON, urlMenu: category.categories)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,7 +31,7 @@ class MainMenuController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuTable", for: indexPath)
         
         cell.textLabel?.text = items[indexPath.row].name
-        cell.detailTextLabel?.text = "Rp. " + items[indexPath.row].price
+        cell.detailTextLabel?.text = String(format: "Rp. %.2f", items[indexPath.row].price)
         
         let imageURL = URL(string: items[indexPath.row].imageURL)
         DispatchQueue.global().async {
@@ -48,8 +47,9 @@ class MainMenuController: UITableViewController {
         return cell
     }
     
-    fileprivate func getJSON(urlString: String) {
-        let url = URL(string: urlString)
+    fileprivate func getJSON(urlString: String, urlMenu: String) {
+        let url = URL(string: urlString)?.appendingPathComponent(urlMenu)
+        print(url!)
         URLSession.shared.dataTask(with: url!) {
             (data, response, err) in
             if err != nil {

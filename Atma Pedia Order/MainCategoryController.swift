@@ -84,13 +84,13 @@ class MainCategoryController: UITableViewController {
     }
     
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "menuVC" {
-//            let mainMenuController = segue.destination as! MainMenuController
-//
-//            let index = tableView.indexPathForSelectedRow!.row
-//
-//            mainMenuController.category = categories[index].categories
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "menuVC" {
+            let mainMenuController = segue.destination as! MainMenuController
+
+            let index = tableView.indexPathForSelectedRow!.row
+
+            mainMenuController.category = categories[index]
+        }
+    }
 }

@@ -16,7 +16,7 @@ class MainDetailController: UIViewController {
     @IBOutlet weak var lblMenu: UILabel!
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
-    @IBOutlet weak var txtDetail: UITextView!
+    @IBOutlet weak var txtDesc: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,8 @@ class MainDetailController: UIViewController {
     func showMenu() {
         lblMenu.text = items.name
         lblCategory.text = items.category
-        lblPrice.text = "Rp. " + items.price
-        txtDetail.text = items.desc
+        lblPrice.text =  String(format: "Rp. %.2f", items.price)
+        txtDesc.text = items.desc
         
         let imageURL = URL(string: items.imageURL)
         DispatchQueue.global().async {

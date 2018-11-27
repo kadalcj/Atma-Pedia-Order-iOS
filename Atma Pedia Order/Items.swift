@@ -11,14 +11,14 @@ import Foundation
 class Items: NSObject {
     var name: String
     var desc: String
-    var price: String
+    var price: Double
     var category: String
     var imageURL: String
     
     init(json: [String: Any]) {
         self.name = json["name"] as? String ?? ""
         self.desc = json["description"] as? String ?? ""
-        self.price = json["price"] as? String ?? ""
+        self.price = json["price"] as? Double ?? 0
         self.category = json["category"] as? String ?? ""
         self.imageURL = json["image_url"] as? String ?? ""
     }

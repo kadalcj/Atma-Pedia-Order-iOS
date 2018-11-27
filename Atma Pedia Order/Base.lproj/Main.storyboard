@@ -220,14 +220,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PsZ-ke-eXr">
-                                <rect key="frame" x="13" y="352" width="289" height="119"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ7-xz-MSL">
+                                <rect key="frame" x="16" y="352" width="288" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="z5y-ux-x5a"/>
@@ -237,7 +236,7 @@
                         <outlet property="lblCategory" destination="eRE-9F-rkB" id="KeY-QY-plv"/>
                         <outlet property="lblMenu" destination="30i-rL-5OQ" id="4i3-zO-LNE"/>
                         <outlet property="lblPrice" destination="Yzc-8O-Oq2" id="dJs-Ve-U2z"/>
-                        <outlet property="txtDetail" destination="PsZ-ke-eXr" id="6EZ-n1-ED5"/>
+                        <outlet property="txtDesc" destination="JJ7-xz-MSL" id="2vF-mR-Tgd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIy-Tj-cBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -360,7 +359,9 @@
         <scene sceneID="UOv-TW-ucV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="psn-VJ-Iku" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menu" selectedImage="menu" id="6DM-O4-ZpH"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="menu" id="6DM-O4-ZpH">
+                        <color key="badgeColor" red="0.62881588935852051" green="0.21151822805404663" blue="0.20303106307983398" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v2P-Pc-EXx">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -476,7 +477,9 @@
         <scene sceneID="KRf-nS-xLt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7kl-nQ-e8c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Your Order" selectedImage="order" id="A1M-WB-8cA"/>
+                    <tabBarItem key="tabBarItem" title="Your Order" image="order" id="A1M-WB-8cA">
+                        <color key="badgeColor" red="0.62881588935852051" green="0.21151822805404663" blue="0.20303106307983398" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fof-hR-GUp">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
