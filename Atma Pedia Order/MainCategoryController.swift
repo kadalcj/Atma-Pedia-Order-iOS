@@ -10,7 +10,7 @@ import UIKit
 
 class MainCategoryController: UITableViewController {
     
-    let URL_JSON = "https://atmapediaorder.nolyfeteam.site/public/api/categories/"
+    let URL_JSON = "http://192.168.100.7:8000/api/categories/"
     
     var categories = [Categories]()
     

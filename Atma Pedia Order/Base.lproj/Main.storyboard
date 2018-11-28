@@ -227,6 +227,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7T-NI-4iU">
+                                <rect key="frame" x="16" y="470" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.62881588939999999" green="0.21151822810000001" blue="0.20303106309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Add To Cart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnOrder:" destination="QaR-Lg-gcx" eventType="touchUpInside" id="b3p-2a-qs0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="z5y-ux-x5a"/>
@@ -251,6 +262,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.62881588939999999" green="0.21151822810000001" blue="0.20303106309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="psn-VJ-Iku" kind="relationship" relationship="viewControllers" id="ans-7n-ZDT"/>
@@ -390,7 +402,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="auh-ed-F6K" detailTextLabel="ja1-lW-pxv" imageView="5mR-8k-ZsZ" style="IBUITableViewCellStyleValue1" id="D2S-Ug-dF6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderTable" textLabel="auh-ed-F6K" detailTextLabel="ja1-lW-pxv" imageView="5mR-8k-ZsZ" style="IBUITableViewCellStyleValue1" id="D2S-Ug-dF6">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D2S-Ug-dF6" id="VOb-M0-j85">
@@ -425,6 +437,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Your Order" id="zh7-dT-da4">
+                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="MtY-K4-046">
+                            <connections>
+                                <action selector="btnRefresh:" destination="gI8-jD-ZSm" id="dw5-ZI-7iZ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Hod-h6-4Uq">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XGG-ZI-cFf">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
@@ -432,7 +449,7 @@
                                 <state key="normal" title="Pay"/>
                             </button>
                             <connections>
-                                <action selector="btnPay:" destination="gI8-jD-ZSm" id="hhj-WA-ZjV"/>
+                                <action selector="btnPay:" destination="gI8-jD-ZSm" id="TUz-xe-v7H"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

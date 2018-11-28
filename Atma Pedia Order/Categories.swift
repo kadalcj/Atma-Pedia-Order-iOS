@@ -13,13 +13,13 @@ class Categories: NSObject, Codable {
     var image_url: String
     
     init(json: [String: Any]) {
-        self.categories = json["categories"] as? String ?? ""
+        self.categories = json["name"] as? String ?? ""
         self.image_url = json["image_url"] as? String ?? ""
     }
     
     func printData() {
         print(
-            "categories", self.categories,
+            "name", self.categories,
             "image_url", self.image_url
         )
     }

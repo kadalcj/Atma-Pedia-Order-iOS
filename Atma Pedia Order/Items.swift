@@ -9,6 +9,7 @@
 import Foundation
 
 class Items: NSObject {
+    var id: Int
     var name: String
     var desc: String
     var price: Double
@@ -16,6 +17,7 @@ class Items: NSObject {
     var imageURL: String
     
     init(json: [String: Any]) {
+        self.id = json["id"] as? Int ?? 0
         self.name = json["name"] as? String ?? ""
         self.desc = json["description"] as? String ?? ""
         self.price = json["price"] as? Double ?? 0
@@ -25,6 +27,7 @@ class Items: NSObject {
     
     func printData() {
         print(
+            "id", self.id,
             "name", self.name,
             "description", self.desc,
             "price", self.price,

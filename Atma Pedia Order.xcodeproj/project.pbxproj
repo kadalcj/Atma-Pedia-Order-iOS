@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0221B121AEADCE0078B9E8 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0221B021AEADCE0078B9E8 /* Users.swift */; };
 		BC3FED3421A839AD00001F89 /* MainCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FED3321A839AD00001F89 /* MainCategoryController.swift */; };
 		BC3FED3621A841A600001F89 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FED3521A841A600001F89 /* Items.swift */; };
 		BC46FE4121ABD8DA008ED62C /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC46FE4021ABD8DA008ED62C /* Categories.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC0221B021AEADCE0078B9E8 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		BC3FED3321A839AD00001F89 /* MainCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryController.swift; sourceTree = "<group>"; };
 		BC3FED3521A841A600001F89 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		BC46FE4021ABD8DA008ED62C /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				BC9DDCF521A2C7C200DED4C2 /* Assets.xcassets */,
 				BC9DDCF721A2C7C200DED4C2 /* LaunchScreen.storyboard */,
 				BC9DDCFA21A2C7C200DED4C2 /* Info.plist */,
+				BC0221B021AEADCE0078B9E8 /* Users.swift */,
 				BC46FE4021ABD8DA008ED62C /* Categories.swift */,
 				BC3FED3521A841A600001F89 /* Items.swift */,
 				BC9DDCF021A2C7C000DED4C2 /* LoginController.swift */,
@@ -163,6 +166,7 @@
 				BC46FE4521ABF9D7008ED62C /* MainDetailController.swift in Sources */,
 				BC46FE4121ABD8DA008ED62C /* Categories.swift in Sources */,
 				BC9DDCEF21A2C7C000DED4C2 /* AppDelegate.swift in Sources */,
+				BC0221B121AEADCE0078B9E8 /* Users.swift in Sources */,
 				BC3FED3421A839AD00001F89 /* MainCategoryController.swift in Sources */,
 				BC9DDD0121A2CFC900DED4C2 /* RegisterController.swift in Sources */,
 				BC3FED3621A841A600001F89 /* Items.swift in Sources */,
